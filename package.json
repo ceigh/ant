@@ -1,0 +1,69 @@
+{
+  "name": "ant",
+  "version": "0.0.0",
+  "description": "Langton's ant",
+  "main": "index.js",
+  "repository": "https://github.com/ceigh/ant",
+  "author": "Artjom Löbsack <ceigh@pm.me>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "svelvet",
+    "build": "NODE_ENV=production svelvet",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "svelte": "^3.22.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.2.5",
+    "svelvet": "^0.4.2"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "plugins": [
+      "svelte3"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.svelte"
+        ],
+        "processor": "svelte3/svelte3"
+      }
+    ],
+    "ignorePatterns": [
+      "dist"
+    ],
+    "rules": {
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 1,
+          "maxBOF": 2,
+          "maxEOF": 0
+        }
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint"
+    }
+  }
+}
