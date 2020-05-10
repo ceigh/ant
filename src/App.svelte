@@ -1,7 +1,3 @@
-<div>
-  <h1>{ header }</h1>
-</div>
-
 <script>
   const header = 'Ant'
 </script>
@@ -11,3 +7,5 @@
     color: #00f;
   }
 </style>
+
+<h1>{ header }</h1>
