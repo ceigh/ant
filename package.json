@@ -10,7 +10,7 @@
   "scripts": {
     "start": "svelvet",
     "build": "NODE_ENV=production svelvet",
-    "lint": "eslint . --fix"
+    "lint": "eslint ."
   },
   "dependencies": {
     "svelte": "^3.22.2"

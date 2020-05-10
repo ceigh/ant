@@ -3,7 +3,7 @@
 </div>
 
 <script>
-  const header = 'Ant';
+  const header = 'Ant'
 </script>
 
 <style>
